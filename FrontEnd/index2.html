@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listado de películas</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#"><img src="img/peliculas-logo.png" alt="Logo de películas"></a>
+        <section id="pelicula-del-dia">
+          <h2>Película del día</h2>
+          <div id="pelicula-del-dia-info">
+            <p>Cargando...</p>
+          </div>
+        </section>
+        <ul>
+          <li id="inicio-v2"><a href="#">Inicio</a></li>
+          <li><a href="#">Catalogo</a></li>
+        </ul>
+      </nav>
+      <!-- ventana emergente -->
+    <div id="alert-container2"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Cátalogo</h1>
+      <div class="row">
+        <div class="col-md-6 filters">
+          <label for="sort-by">Ordenar por:</label>
+          <select id="sort-by">
+            <option value="nombre">Nombre</option>
+            <option value="tipo">Tipo</option>
+            <option value="genero">Género</option>
+            <option value="puntaje">Puntaje</option>
+          </select>
+          <div class="movies-list">
+            <ul id="movies">
+              <!-- Aquí se cargarán las películas -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 search-container">
+          <div class="row">
+            <div class="col-md-8">
+              <form>
+                <h3>Buscar película</h3>
+                <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre" name="name">
+                </div>
+                <div class="form-group">
+                  <label for="genre">Género:</label>
+                  <select id="genero" class="form-control" name="genre">
+                    <option value="">Seleccione un género</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasía">Fantasía</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="type">Tipo:</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipo" id="movie" value="Película" checked>
+                    <label class="form-check-label" for="movie">Película</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipo" id="serie" value="Serie">
+                    <label class="form-check-label" for="serie">Serie</label>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="search-button">Buscar</button>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-primary" id="btn-aleatorio">Aleatorizar</button>
+              <div class="movies-list2">
+                <ul id="movies2">
+                  <!-- Aquí se cargará la película aleatoria -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+    </div>
+  </main>
+
+  <script src="script2.js"></script>
+</body>
+</html>
